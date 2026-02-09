@@ -1,0 +1,260 @@
+2026-02-07 21:17:23,160 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:17:23,164 [INFO] logging in using static token
+2026-02-07 21:17:24,644 [INFO] Shard ID None has connected to Gateway (Session ID: 8ca92a513422594e50f98a7dbc830a08).
+2026-02-07 21:17:32,073 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683499706351821 responded with 429. Retrying in 0.30 seconds.
+2026-02-07 21:17:32,657 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683499706351821 responded with 429. Retrying in 0.52 seconds.
+2026-02-07 21:17:33,484 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683502747226294 responded with 429. Retrying in 0.68 seconds.
+2026-02-07 21:17:33,501 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683503582019648 responded with 429. Retrying in 0.66 seconds.
+2026-02-07 21:17:33,518 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683501480546395 responded with 429. Retrying in 0.65 seconds.
+2026-02-07 21:17:34,423 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683503582019648 responded with 429. Retrying in 0.74 seconds.
+2026-02-07 21:17:34,432 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683502747226294 responded with 429. Retrying in 0.73 seconds.
+2026-02-07 21:17:35,446 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683503582019648 responded with 429. Retrying in 0.73 seconds.
+2026-02-07 21:17:38,557 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683509118632038 responded with 429. Retrying in 0.61 seconds.
+2026-02-07 21:17:38,576 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683510762799186 responded with 429. Retrying in 0.59 seconds.
+2026-02-07 21:17:38,612 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683507784843295 responded with 429. Retrying in 0.55 seconds.
+2026-02-07 21:17:39,413 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683509118632038 responded with 429. Retrying in 0.75 seconds.
+2026-02-07 21:17:39,423 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683510762799186 responded with 429. Retrying in 0.74 seconds.
+2026-02-07 21:17:40,437 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683509118632038 responded with 429. Retrying in 0.73 seconds.
+2026-02-07 21:17:42,601 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683516152352853 responded with 429. Retrying in 0.56 seconds.
+2026-02-07 21:17:42,602 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683512742379669 responded with 429. Retrying in 0.56 seconds.
+2026-02-07 21:17:42,622 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683513099026504 responded with 429. Retrying in 0.54 seconds.
+2026-02-07 21:17:42,679 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683517708439637 responded with 429. Retrying in 0.52 seconds.
+2026-02-07 21:17:43,419 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683512742379669 responded with 429. Retrying in 0.73 seconds.
+2026-02-07 21:17:43,444 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683513099026504 responded with 429. Retrying in 0.71 seconds.
+2026-02-07 21:17:43,450 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683517708439637 responded with 429. Retrying in 0.71 seconds.
+2026-02-07 21:17:44,403 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683513099026504 responded with 429. Retrying in 0.75 seconds.
+2026-02-07 21:17:44,434 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683517708439637 responded with 429. Retrying in 0.72 seconds.
+2026-02-07 21:17:45,433 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683517708439637 responded with 429. Retrying in 0.73 seconds.
+2026-02-07 21:17:47,476 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683516609396828 responded with 429. Retrying in 0.70 seconds.
+2026-02-07 21:17:47,485 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683515409825977 responded with 429. Retrying in 0.67 seconds.
+2026-02-07 21:17:48,146 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683519931289682 responded with 429. Retrying in 0.30 seconds.
+2026-02-07 21:17:48,451 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683516609396828 responded with 429. Retrying in 0.71 seconds.
+2026-02-07 21:17:48,757 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683519931289682 responded with 429. Retrying in 0.42 seconds.
+2026-02-07 21:17:49,060 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683515485458462 responded with 429. Retrying in 0.30 seconds.
+2026-02-07 21:17:49,483 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683516609396828 responded with 429. Retrying in 0.69 seconds.
+2026-02-07 21:17:49,628 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683515485458462 responded with 429. Retrying in 0.54 seconds.
+2026-02-07 21:17:50,117 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683519717380341 responded with 429. Retrying in 0.30 seconds.
+2026-02-07 21:17:50,474 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683516609396828 responded with 429. Retrying in 0.70 seconds.
+2026-02-07 21:17:50,685 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683519717380341 responded with 429. Retrying in 0.47 seconds.
+2026-02-07 21:17:51,091 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683523974860813 responded with 429. Retrying in 0.30 seconds.
+2026-02-07 21:17:51,430 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683516609396828 responded with 429. Retrying in 0.74 seconds.
+2026-02-07 21:17:51,623 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683523974860813 responded with 429. Retrying in 0.53 seconds.
+2026-02-07 21:17:52,085 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683522573963337 responded with 429. Retrying in 0.30 seconds.
+2026-02-07 21:17:52,623 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683522573963337 responded with 429. Retrying in 0.53 seconds.
+2026-02-07 21:17:53,429 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683522573963337 responded with 429. Retrying in 0.74 seconds.
+2026-02-07 21:17:53,801 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683514151669801 responded with 429. Retrying in 0.37 seconds.
+2026-02-07 21:17:54,435 [WARNING] We are being rate limited. DELETE https://discord.com/api/v10/channels/1469090586828214423/messages/1469683522573963337 responded with 429. Retrying in 0.73 seconds.
+2026-02-07 21:27:29,648 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:125> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 128, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:27:31,778 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:27:31,782 [INFO] logging in using static token
+2026-02-07 21:27:33,521 [INFO] Shard ID None has connected to Gateway (Session ID: a9832eed9eb210ccc84587d7f5d9324b).
+2026-02-07 21:28:25,083 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:125> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 128, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:28:31,644 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:28:31,649 [INFO] logging in using static token
+2026-02-07 21:28:33,119 [INFO] Shard ID None has connected to Gateway (Session ID: c178ae573c638a14328ef7ad3ea9b50a).
+2026-02-07 21:33:22,966 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:125> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 128, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:33:25,648 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:33:25,653 [INFO] logging in using static token
+2026-02-07 21:33:27,158 [INFO] Shard ID None has connected to Gateway (Session ID: 514b75fe402c42a1e69c04a3d0bb6f54).
+2026-02-07 21:36:57,094 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:132> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 135, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:36:59,621 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:36:59,626 [INFO] logging in using static token
+2026-02-07 21:37:01,106 [INFO] Shard ID None has connected to Gateway (Session ID: 5659a53106ec08abd6b4e13b823bcb4a).
+2026-02-07 21:40:08,434 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:134> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 137, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:40:11,747 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:40:11,753 [INFO] logging in using static token
+2026-02-07 21:40:13,453 [INFO] Shard ID None has connected to Gateway (Session ID: 0671175e16d0f312e2a904a257e83060).
+2026-02-07 21:42:21,849 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:133> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 136, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:42:25,252 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:42:25,255 [INFO] logging in using static token
+2026-02-07 21:42:26,651 [INFO] Shard ID None has connected to Gateway (Session ID: cdb1067f22a3fd0d608a67e257bf55c3).
+2026-02-07 21:44:18,633 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:133> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 136, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:44:20,853 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:44:20,858 [INFO] logging in using static token
+2026-02-07 21:44:22,286 [INFO] Shard ID None has connected to Gateway (Session ID: c74fbd194056b605585d40dda0d3f882).
+2026-02-07 21:47:16,388 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:133> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 136, in console_listener
+    channel_id_str, content = user_input.split(":", 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 21:47:19,018 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 21:47:19,022 [INFO] logging in using static token
+2026-02-07 21:47:20,647 [INFO] Shard ID None has connected to Gateway (Session ID: df3eef4f6ad2cfb4219576e47632603d).
+2026-02-07 21:47:23,589 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 21:47:43,402 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 21:49:34,907 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 21:49:41,810 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:131> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 134, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 22:17:57,681 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 22:17:57,686 [INFO] logging in using static token
+2026-02-07 22:17:59,566 [INFO] Shard ID None has connected to Gateway (Session ID: d17427f5ba80c6afd0479da49a808b2e).
+2026-02-07 22:18:05,191 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 22:53:42,162 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 23:05:38,157 [ERROR] 防禦執行失敗: 404 Not Found (error code: 10008): Unknown Message
+2026-02-07 23:05:38,408 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 23:05:55,581 [ERROR] 防禦執行失敗: 404 Not Found (error code: 10008): Unknown Message
+2026-02-07 23:05:55,694 [WARNING] 偵測到 Message spam bot 嘗試連發標記，已攔截。
+2026-02-07 23:05:56,040 [ERROR] 防禦執行失敗: 404 Not Found (error code: 10008): Unknown Message
+2026-02-07 23:31:16,059 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:131> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 134, in console_listener
+    @bot.command(name="showdata")
+                         ^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 23:31:17,907 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 23:31:17,910 [INFO] logging in using static token
+2026-02-07 23:31:19,532 [INFO] Shard ID None has connected to Gateway (Session ID: 4434ba17244731f209da507dcdfb379a).
+2026-02-07 23:32:41,780 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<console_listener() done, defined at c:\Users\Admin\Desktop\codes\nword count\antispam.py:119> exception=EOFError()>
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\codes\nword count\antispam.py", line 122, in console_listener
+    user_input = await asyncio.to_thread(input, "後台發送 (格式: 頻道ID:訊息): ")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+EOFError
+2026-02-07 23:32:43,319 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-07 23:32:43,321 [INFO] logging in using static token
+2026-02-07 23:32:44,895 [INFO] Shard ID None has connected to Gateway (Session ID: 69f5b7f5d8ad36dc20c1c1a42413443b).
+2026-02-07 23:32:47,620 [INFO] Logged in as nword偵測器
+2026-02-07 23:32:47,889 [INFO] 已成功清除並同步所有指令
+2026-02-07 23:33:15,617 [INFO] ug.beluga 說了不雅字，累計: 2147499547
+2026-02-07 23:33:18,492 [INFO] ug.beluga 說了不雅字，累計: 2147499548
+2026-02-07 23:33:19,151 [INFO] ug.beluga 說了不雅字，累計: 2147499549
+2026-02-07 23:33:19,586 [INFO] ug.beluga 說了不雅字，累計: 2147499550
+2026-02-07 23:33:20,127 [INFO] ug.beluga 說了不雅字，累計: 2147499551
+2026-02-07 23:33:38,718 [WARNING] 攔截了 Message spam bot 的標記行為
+2026-02-07 23:33:39,085 [WARNING] 攔截了 Message spam bot 的標記行為
+2026-02-07 23:33:39,359 [WARNING] 攔截了 Message spam bot 的標記行為
+2026-02-07 23:33:39,563 [WARNING] 攔截了 Message spam bot 的標記行為
+2026-02-07 23:33:41,095 [WARNING] 攔截了 Message spam bot 的標記行為
+2026-02-07 23:36:41,671 [INFO] l_06._.lune._.19_l 說了不雅字，累計: 1
+2026-02-07 23:37:05,156 [INFO] ug.beluga 說了不雅字，累計: 2147499552
+2026-02-07 23:37:23,889 [INFO] _1yei0x 說了不雅字，累計: 2
+2026-02-07 23:37:29,565 [INFO] _1yei0x 說了不雅字，累計: 3
+2026-02-07 23:38:02,029 [INFO] ug.beluga 說了不雅字，累計: 2147499555
