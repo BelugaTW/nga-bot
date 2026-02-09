@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import time
+import re
 
 class LeaderboardView(discord.ui.View):
     def __init__(self, bot, page, per_page):
@@ -11,6 +12,9 @@ class LeaderboardView(discord.ui.View):
 
     async def get_page_embed(self, page):
         offset = (page - 1) * self.per_page
+        # 確保資料庫存在
+        if not self.bot.db: return None
+        
         rows = await self.bot.db.fetch(f'''
             SELECT user_id, count FROM nword_stats 
             ORDER BY count DESC LIMIT $1 OFFSET $2
@@ -18,7 +22,7 @@ class LeaderboardView(discord.ui.View):
 
         if not rows and page > 1: return None
 
-        embed = discord.Embed(title=f"nword排行 (第 {page} 頁)", color=discord.Color.blue())
+        embed = discord.Embed(title=f"nword leaderboard (第 {page} 頁)", color=discord.Color.gold())
         desc = ""
         for i, row in enumerate(rows, 1 + offset):
             user_id = row['user_id']
@@ -27,9 +31,10 @@ class LeaderboardView(discord.ui.View):
                 try: user = await self.bot.fetch_user(user_id)
                 except: user = None
             name = user.name if user else f"未知用戶({user_id})"
-            desc += f"{i}. **{name}**: {row['count']:,} 次\n"
+            desc += f"{i}. **{name}**: `{row['count']:,}` 次\n"
         
         embed.description = desc or "暫無資料"
+        embed.set_footer(text="多說點，榜單等你。")
         return embed
 
     @discord.ui.button(label="上一頁", style=discord.ButtonStyle.gray)
@@ -54,6 +59,7 @@ class WordCounter(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.user_everyone_times = {}
+        # 權重表優化
         self.NWORDS_WEIGHTS = {
             "nigger": 1, "nigga": 1, "黑鬼": 1, "黑奴": 1, "nga": 1,
             "diddy": 2, "epstein": 7, "sybau": 3, "efn": 1, "niga": 1,
@@ -62,31 +68,25 @@ class WordCounter(commands.Cog):
             "靠北": 1, "你媽死了": 4, "你媽": 1, "cnm": 1,
         }
 
-    async def handle_antispam(self, message):
-        now = time.time()
-        uid = message.author.id
-        logs = self.user_everyone_times.get(uid, [])
-        logs = [t for t in logs if now - t < 10]
-        logs.append(now)
-        self.user_everyone_times[uid] = logs
-        try:
-            await message.delete()
-            if len(logs) == 2:
-                await message.channel.send(f"{message.author.mention} 白痴被我防住了吧")
-        except: pass
-
-    @commands.Cog.listener()
+    @commands.Cog.listener() # 必須加上監聽器標籤，否則不會跑
     async def on_message(self, message):
-        if message.author.bot or not self.bot.db: return
-
-        if "@everyone" in message.content or "@here" in message.content:
-            await self.handle_antispam(message)
+        if message.author.bot or not self.bot.db:
             return
 
-        content_lower = message.content.lower()
+        # 處理 Antispam 邏輯 (確保 main 有這個屬性)
+        if "@everyone" in message.content or "@here" in message.content:
+            # 這裡呼叫主程式或本類別的防洗版邏輯
+            if hasattr(self, 'handle_antispam'):
+                await self.handle_antispam(message)
+            return
+
+        # 去除常見標點符號防止繞過 (例如: 幹.你.娘)
+        clean_content = re.sub(r'[^\w\s]', '', message.content.lower())
         found_count = 0
+        
         for word, weight in self.NWORDS_WEIGHTS.items():
-            occ = content_lower.count(word)
+            # 使用原本內容與清掉標點後的內容同時偵測
+            occ = message.content.lower().count(word) or clean_content.count(word)
             if occ > 0:
                 found_count += (occ * weight)
 
@@ -99,16 +99,24 @@ class WordCounter(commands.Cog):
                     SET count = nword_stats.count + $2
                     RETURNING count
                 ''', message.author.id, found_count)
-                await message.channel.send(f"{message.author.mention}請不要說n字! 你已經說了 **{new_total:,}** 次")
+                
+                await message.channel.send(
+                    f"{message.author.mention} 請不要說n字! 你已經說了 **{new_total:,}** 次",
+                )
             except Exception as e:
-                print(f"DB Error: {e}")
+                print(f"Database Error during counting: {e}")
 
     @commands.command(name="leaderboard", aliases=["lb"])
     async def leaderboard(self, ctx):
-        if not self.bot.db: return
+        if not self.bot.db:
+            return await ctx.send("資料庫連線中，請稍後...")
+        
         view = LeaderboardView(self.bot, page=1, per_page=10)
         embed = await view.get_page_embed(1)
-        await ctx.send(embed=embed, view=view)
+        if embed:
+            await ctx.send(embed=embed, view=view)
+        else:
+            await ctx.send("目前排行榜空空如也。")
 
 async def setup(bot):
     await bot.add_cog(WordCounter(bot))
