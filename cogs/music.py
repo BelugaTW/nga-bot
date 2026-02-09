@@ -16,7 +16,7 @@ YDL_OPTIONS = {
 STREAM_OPTIONS = {'format': 'bestaudio/best', 'noplaylist': True, 'quiet': True}
 FFMPEG_OPTIONS = {
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
-    'options': '-vn',
+    'options': '-vn -threads 1', # 限制單線程處理有助於穩定部分老舊 CPU
 }
 
 class MusicControlView(discord.ui.View):
@@ -24,15 +24,7 @@ class MusicControlView(discord.ui.View):
         super().__init__(timeout=None)
         self.cog = cog
         self.ctx = ctx
-
-    @discord.ui.button(label="音量-", style=discord.ButtonStyle.gray)
-    async def volume_down(self, interaction: discord.Interaction, button: discord.ui.Button):
-        vc = interaction.guild.voice_client
-        if vc and vc.source:
-            new_vol = max(0.0, vc.source.volume - 0.1)
-            vc.source.volume = new_vol
-            await interaction.response.send_message(f"音量: {int(new_vol * 100)}%", ephemeral=True)
-
+        
     @discord.ui.button(label="暫停/繼續", style=discord.ButtonStyle.blurple)
     async def toggle_pause(self, interaction: discord.Interaction, button: discord.ui.Button):
         vc = interaction.guild.voice_client
@@ -43,14 +35,6 @@ class MusicControlView(discord.ui.View):
         elif vc.is_paused():
             vc.resume()
             await interaction.response.send_message("繼續播放", ephemeral=True)
-
-    @discord.ui.button(label="音量+", style=discord.ButtonStyle.gray)
-    async def volume_up(self, interaction: discord.Interaction, button: discord.ui.Button):
-        vc = interaction.guild.voice_client
-        if vc and vc.source:
-            new_vol = min(2.0, vc.source.volume + 0.1)
-            vc.source.volume = new_vol
-            await interaction.response.send_message(f"音量: {int(new_vol * 100)}%", ephemeral=True)
 
     @discord.ui.button(label="跳過", style=discord.ButtonStyle.green)
     async def skip(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -91,8 +75,7 @@ class Music(commands.Cog):
                 except:
                     return await self.play_next(ctx)
 
-            raw_source = discord.FFmpegPCMAudio(stream_url, **FFMPEG_OPTIONS)
-            source = discord.PCMVolumeTransformer(raw_source, volume=self.volume)
+            source = await discord.FFmpegOpusAudio.from_probe(stream_url, **FFMPEG_OPTIONS)
             ctx.voice_client.play(source, after=lambda e: self.bot.loop.create_task(self.play_next(ctx)))
         
         await ctx.send(f"正在播放: **{title}**", view=MusicControlView(self, ctx))
