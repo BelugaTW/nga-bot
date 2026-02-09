@@ -24,7 +24,43 @@ class MusicControlView(discord.ui.View):
         super().__init__(timeout=None)
         self.cog = cog
         self.ctx = ctx
-        
+    
+class MyBot(commands.Bot):
+    def __init__(self):
+        super().__init__(command_prefix="!", intents=discord.Intents.all())
+        self.db = None
+
+    @commands.Cog.listener()
+    async def on_voice_state_update(self, member, before, after):
+        # 取得機器人的語音客戶端
+        voice_client = member.guild.voice_client
+        if not voice_client:
+            return
+
+        # 當頻道只剩機器人一人時
+        if len(voice_client.channel.members) == 1:
+            # 清空該伺服器的播放隊列
+            if member.guild.id in self.queues:
+                self.queues[member.guild.id].clear()
+            
+            # 中斷連線
+            await voice_client.disconnect()
+    
+    @commands.Cog.listener()
+    async def on_voice_state_update(self, member, before, after):
+        # 取得機器人所在的語音客戶端
+        voice_client = member.guild.voice_client
+        if not voice_client:
+            return
+
+        # 檢查機器人所在的頻道是否只剩它自己
+        if len(voice_client.channel.members) == 1:
+            # 停止播放並清空隊列
+            if member.guild.id in self.queues:
+                self.queues[member.guild.id].clear()
+            
+            await voice_client.disconnect()
+
     @discord.ui.button(label="暫停/繼續", style=discord.ButtonStyle.blurple)
     async def toggle_pause(self, interaction: discord.Interaction, button: discord.ui.Button):
         vc = interaction.guild.voice_client

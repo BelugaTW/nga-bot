@@ -12,22 +12,7 @@ class MyBot(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix="!", intents=discord.Intents.all())
         self.db = None
-    
-    @commands.Cog.listener()
-    async def on_voice_state_update(self, member, before, after):
-        # 取得機器人所在的語音客戶端
-        voice_client = member.guild.voice_client
-        if not voice_client:
-            return
-
-        # 檢查機器人所在的頻道是否只剩它自己
-        if len(voice_client.channel.members) == 1:
-            # 停止播放並清空隊列
-            if member.guild.id in self.queues:
-                self.queues[member.guild.id].clear()
-            
-            await voice_client.disconnect()
-
+        
     async def terminal_input(self):
         await self.wait_until_ready()
         print("終端機訊息系統已就緒 (格式: 頻道ID 訊息內容)")
