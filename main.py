@@ -10,7 +10,7 @@ load_dotenv()
 
 class MyBot(commands.Bot):
     def __init__(self):
-        # 移除自定義 loop 傳遞，交由 run() 處理
+    
         super().__init__(command_prefix="!", intents=discord.Intents.all())
         self.db = None
         
@@ -24,7 +24,6 @@ class MyBot(commands.Bot):
                 if not user_input.strip(): continue
                 
                 parts = user_input.split(" ", 1)
-                # 修正：過濾掉 VS Code 可能傳入的非數字前綴
                 raw_id = "".join(filter(str.isdigit, parts[0]))
                 
                 if not raw_id or len(parts) < 2:
@@ -44,7 +43,6 @@ class MyBot(commands.Bot):
                 print(f"輸入處理異常: {e}")
 
     async def setup_hook(self):
-        # 1. 資料庫連線 (失敗不應該中斷 Cog 載入)
         try:
             self.db = await asyncpg.create_pool(
                 user='postgres',
@@ -55,9 +53,7 @@ class MyBot(commands.Bot):
             print("Database connected")
         except Exception as e:
             print(f"Database error: {e}")
-            # 不要在這裡 return，否則 Cog 都不會讀取
 
-        # 2. 動態取得路徑，確保 Windows/Linux 都能讀到
         cogs_path = os.path.join(os.path.dirname(__file__), "cogs")
         
         if os.path.exists(cogs_path):

@@ -68,24 +68,20 @@ class WordCounter(commands.Cog):
             "靠北": 1, "你媽死了": 4, "你媽": 1, "cnm": 1,
         }
 
-    @commands.Cog.listener() # 必須加上監聽器標籤，否則不會跑
+    @commands.Cog.listener() 
     async def on_message(self, message):
         if message.author.bot or not self.bot.db:
             return
 
-        # 處理 Antispam 邏輯 (確保 main 有這個屬性)
         if "@everyone" in message.content or "@here" in message.content:
-            # 這裡呼叫主程式或本類別的防洗版邏輯
             if hasattr(self, 'handle_antispam'):
                 await self.handle_antispam(message)
             return
 
-        # 去除常見標點符號防止繞過 (例如: 幹.你.娘)
         clean_content = re.sub(r'[^\w\s]', '', message.content.lower())
         found_count = 0
         
         for word, weight in self.NWORDS_WEIGHTS.items():
-            # 使用原本內容與清掉標點後的內容同時偵測
             occ = message.content.lower().count(word) or clean_content.count(word)
             if occ > 0:
                 found_count += (occ * weight)
