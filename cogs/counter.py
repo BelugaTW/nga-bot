@@ -1,4 +1,7 @@
+from shutil import ignore_patterns
+
 import discord
+from discord import app_commands
 from discord.ext import commands
 import time
 import re
@@ -12,29 +15,24 @@ class LeaderboardView(discord.ui.View):
 
     async def get_page_embed(self, page):
         offset = (page - 1) * self.per_page
-        # 確保資料庫存在
         if not self.bot.db: return None
         
-        rows = await self.bot.db.fetch(f'''
+        rows = await self.bot.db.fetch('''
             SELECT user_id, count FROM nword_stats 
             ORDER BY count DESC LIMIT $1 OFFSET $2
         ''', self.per_page, offset)
 
         if not rows and page > 1: return None
 
-        embed = discord.Embed(title=f"nword leaderboard (第 {page} 頁)", color=discord.Color.gold())
+        embed = discord.Embed(title=f" 你們這些低能講幾次了 (第 {page} 頁)", color=discord.Color.gold())
         desc = ""
         for i, row in enumerate(rows, 1 + offset):
             user_id = row['user_id']
-            user = self.bot.get_user(user_id)
-            if not user:
-                try: user = await self.bot.fetch_user(user_id)
-                except: user = None
+            user = self.bot.get_user(user_id) or await self.bot.fetch_user(user_id)
             name = user.name if user else f"未知用戶({user_id})"
             desc += f"{i}. **{name}**: `{row['count']:,}` 次\n"
         
         embed.description = desc or "暫無資料"
-        embed.set_footer(text="多說點，榜單等你。")
         return embed
 
     @discord.ui.button(label="上一頁", style=discord.ButtonStyle.gray)
@@ -58,33 +56,49 @@ class LeaderboardView(discord.ui.View):
 class WordCounter(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.user_everyone_times = {}
-        # 權重表優化
         self.NWORDS_WEIGHTS = {
-            "nigger": 1, "nigga": 1, "黑鬼": 1, "黑奴": 1, "nga": 1,
-            "diddy": 2, "epstein": 7, "sybau": 3, "efn": 1, "niga": 1,
-            "n1gga": 1, "幹": 1, "幹你娘": 2, "黑人": 1, "鞭": 1,
+            "nigger": 1, "nigga": 1, "黑鬼": 1, "黑奴": 1, 
+            "diddy": 2, "epstein": 7, "sybau": 3, "niga": 1,
+            "n1gga": 1, "幹你娘": 2, "黑人": 1, "鞭": 1,
             "g8": 1, "黑鬼吃西瓜": 5, "閉嘴": 1, "滾": 1, "三小": 1,
-            "靠北": 1, "你媽死了": 4, "你媽": 1, "cnm": 1,
-        }
+            "靠北": 1, "你媽死了": 4, "你媽": 1, "林秉諺": 69
+            , "gay": 1, "你媽炸了": 4, "你媽死全家": 5, "你全家死了": 5, "尼哥": 1, 
+            "尼哥吃西瓜": 5,"家人死完": 5, "全家死完": 5, "全家死了": 5, "你全家死完": 5
+            }
 
     @commands.Cog.listener() 
     async def on_message(self, message):
-        if message.author.bot or not self.bot.db:
+
+        if message.author.bot or not message.content: 
             return
 
-        if "@everyone" in message.content or "@here" in message.content:
-            if hasattr(self, 'handle_antispam'):
-                await self.handle_antispam(message)
-            return
+        # 2. 定義要排除的模式 (確保這是個 List [])
+        ignore_patterns = [
+            r'http[s]?://\S+',               # 網址
+            r'\.(png|jpg|jpeg|gif|webp)$',    # 圖檔結尾
+            r'cdn\.discordapp\.com',          # Discord 資源連結
+            r'media\.discordapp\.net'         # Discord 媒體連結
+        ]
 
-        clean_content = re.sub(r'[^\w\s]', '', message.content.lower())
+        content_lower = message.content.lower()
+
+        # 3. 檢查是否包含網址或圖片路徑
+        for pattern in ignore_patterns:
+            if re.search(pattern, content_lower):
+                return # 命中排除模式，直接結束
+
+        # 4. 排除附件
+        if len(message.attachments) > 0:
+            return
+        clean_content = re.sub(r'[^\w\s]', '', content_lower)
         found_count = 0
         
         for word, weight in self.NWORDS_WEIGHTS.items():
-            occ = message.content.lower().count(word) or clean_content.count(word)
+            # 這裡多加一個判斷：確保關鍵字前後不是連結字元 (可選)
+            occ = content_lower.count(word) or clean_content.count(word)
             if occ > 0:
                 found_count += (occ * weight)
+
 
         if found_count > 0:
             try:
@@ -95,24 +109,23 @@ class WordCounter(commands.Cog):
                     SET count = nword_stats.count + $2
                     RETURNING count
                 ''', message.author.id, found_count)
-                
-                await message.channel.send(
-                    f"{message.author.mention} 請不要說n字! 你已經說了 **{new_total:,}** 次",
-                )
+                await message.channel.send(f"{message.author.mention} 請不要說n字! 你已經說了 **{new_total:,}** 次")
             except Exception as e:
-                print(f"Database Error during counting: {e}")
+                print(f"DB Error: {e}")
 
-    @commands.command(name="leaderboard", aliases=["lb"])
-    async def leaderboard(self, ctx):
+    @app_commands.command(name="leaderboard", description="查看 nword 排行榜")
+    async def leaderboard(self, interaction: discord.Interaction):
         if not self.bot.db:
-            return await ctx.send("資料庫連線中，請稍後...")
+            return await interaction.response.send_message("資料庫連線中...", ephemeral=True)
         
+        await interaction.response.defer()
         view = LeaderboardView(self.bot, page=1, per_page=10)
         embed = await view.get_page_embed(1)
+        
         if embed:
-            await ctx.send(embed=embed, view=view)
+            await interaction.followup.send(embed=embed, view=view)
         else:
-            await ctx.send("目前排行榜空空如也。")
+            await interaction.followup.send("目前排行榜空空如也。")
 
 async def setup(bot):
     await bot.add_cog(WordCounter(bot))
